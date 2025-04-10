@@ -39,3 +39,25 @@ function renderProducts() {
     `);
   });
 }
+function renderCart() {
+  const cartItems = $('.cart-items');
+  cartItems.empty();
+  cart.forEach((item, index) => {
+    cartItems.append(`
+      <div class="card mb-3">
+        <div class="card-body d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <img src="${item.image}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover; margin-right: 15px; border-radius: 8px;">
+            <div>
+              <h5 class="mb-1">${item.name}</h5>
+              <p class="mb-0">Size: UK ${item.size}</p>
+              <p class="mb-0">£${item.price}</p>
+            </div>
+          </div>
+          <button class="btn btn-danger" onclick="removeFromCart(${index})">Remove</button>
+        </div>
+      </div>
+    `);
+  });
+  $('#total').text(cart.reduce((sum, item) => sum + item.price, 0).toFixed(2));
+}
