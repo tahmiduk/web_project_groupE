@@ -78,3 +78,6 @@ function removeFromCart(index) {
   localStorage.setItem('cart', JSON.stringify(cart));
   renderCart();
   updateCartCounter();
+function updateCartCounter() {
+  $('.cart-counter').text(cart.length);
+}
