@@ -59,3 +59,28 @@ body {
 .card:hover {
   transform: translateY(-5px);
 }
+.cart-items {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Shared Footer */
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 300px;
+  }
+
+  .carousel-img {
+    height: 300px;
+  }
+}
