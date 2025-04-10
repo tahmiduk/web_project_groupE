@@ -31,3 +31,7 @@ body {
 .nav-link:hover {
   color: white !important;
 }
+.nav-link.active {
+  color: white !important;
+  border-bottom: 2px solid white;
+}
