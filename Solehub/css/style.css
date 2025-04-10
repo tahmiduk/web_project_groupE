@@ -23,3 +23,11 @@ body {
   font-weight: bold;
   color: white !important;
 }
+.nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
