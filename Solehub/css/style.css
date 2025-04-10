@@ -7,3 +7,9 @@
 html, body {
   height: 100%;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+  font-family: 'Segoe UI', sans-serif;
+}
