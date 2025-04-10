@@ -13,3 +13,13 @@ body {
   background-color: var(--light);
   font-family: 'Segoe UI', sans-serif;
 }
+.navbar {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white !important;
+}
