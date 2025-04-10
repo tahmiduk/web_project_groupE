@@ -46,3 +46,16 @@ body {
   object-fit: cover;
   max-height: 500px;
 }
+.products-grid {
+  padding: 1rem;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
