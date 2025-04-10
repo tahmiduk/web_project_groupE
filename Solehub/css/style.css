@@ -4,3 +4,6 @@
   --dark: #2D3436;
   --light: #F9F9F9;
 }
+html, body {
+  height: 100%;
+}
