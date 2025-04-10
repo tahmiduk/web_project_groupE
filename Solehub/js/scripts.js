@@ -73,4 +73,8 @@ function addToCart(productId) {
   updateCartCounter();
   alert(`${product.name} (UK ${size}) added to cart!`);
 }
-
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  renderCart();
+  updateCartCounter();
