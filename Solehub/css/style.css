@@ -84,3 +84,15 @@ body {
     height: 300px;
   }
 }
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+}
