@@ -81,3 +81,24 @@ function removeFromCart(index) {
 function updateCartCounter() {
   $('.cart-counter').text(cart.length);
 }
+
+$(document).ready(function () {
+  if (window.location.pathname.includes('index.html') && !localStorage.getItem('cookiePreference')) {
+    $('#cookieBanner').fadeIn();
+  }
+
+  $('#acceptAll').click(function () {
+    localStorage.setItem('cookiePreference', 'accepted');
+    $('#cookieBanner').fadeOut();
+  });
+
+  $('#rejectAll').click(function () {
+    localStorage.setItem('cookiePreference', 'rejected');
+    $('#cookieBanner').fadeOut();
+  });
+
+  $('#essentialOnly').click(function () {
+    localStorage.setItem('cookiePreference', 'essential');
+    $('#cookieBanner').fadeOut();
+  });
+});
