@@ -61,3 +61,16 @@ function renderCart() {
   });
   $('#total').text(cart.reduce((sum, item) => sum + item.price, 0).toFixed(2));
 }
+function addToCart(productId) {
+  const size = $(`#size-${productId}`).val();
+  if (!size) {
+    alert('Please select a UK size before adding to cart.');
+    return;
+  }
+  const product = products.find(p => p.id === productId);
+  cart.push({ ...product, size });
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartCounter();
+  alert(`${product.name} (UK ${size}) added to cart!`);
+}
+
