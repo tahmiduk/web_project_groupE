@@ -11,6 +11,7 @@ $(document).ready(function () {
   if (window.location.pathname.includes('cart.html')) renderCart();
   updateCartCounter();
 });
+
 function renderProducts() {
   const grid = $('.products-grid');
   grid.empty();
@@ -39,6 +40,7 @@ function renderProducts() {
     `);
   });
 }
+
 function renderCart() {
   const cartItems = $('.cart-items');
   cartItems.empty();
@@ -61,6 +63,7 @@ function renderCart() {
   });
   $('#total').text(cart.reduce((sum, item) => sum + item.price, 0).toFixed(2));
 }
+
 function addToCart(productId) {
   const size = $(`#size-${productId}`).val();
   if (!size) {
@@ -73,11 +76,14 @@ function addToCart(productId) {
   updateCartCounter();
   alert(`${product.name} (UK ${size}) added to cart!`);
 }
+
 function removeFromCart(index) {
   cart.splice(index, 1);
   localStorage.setItem('cart', JSON.stringify(cart));
   renderCart();
   updateCartCounter();
+}
+
 function updateCartCounter() {
   $('.cart-counter').text(cart.length);
 }
